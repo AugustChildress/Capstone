@@ -1,0 +1,11 @@
+
+observation_log.xlsx:
+
+The Excel file contains date/time, coordinates, and the solar flux. The tracking software had to be restarted during the live stream event, so there are a few missing / problematic data points. The problematic data points are highlighted in yellow and should be discarded.
+
+
+
+
+npz files:
+
+Each file contains five 1-second averaged power spectra in the range of 1421–1423 MHz. These are binary files with only the power values (no frequency), saved as 32-bit float numbers. The FFT size was 4096. There are five spectra saved back-to-back, resulting in 4096 x 5 = 20,480 32-bit numbers in each file. The flux values in the log file were calculated by integrating over a smaller portion of the recorded 2 MHz band.

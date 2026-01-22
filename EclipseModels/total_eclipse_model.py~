@@ -1,0 +1,45 @@
+import matplotlib.pyplot as plt
+
+from datetime import datetime
+
+obs_time = []
+moon_angular_diameter = []
+separation = []
+
+with open('horizons_results_moon_trimmed.txt') as file:
+    for line in file:
+        line_contents = line.rstrip().split()
+        time = line_contents[0] + ' ' + line_contents[1]
+        obs_time.append(datetime.fromisoformat(time))
+        moon_angular_diameter.append(float(line_contents[2]))
+        separation.append(float(line_contents[3]))
+
+with open('horizons_results_sun_trimmed.txt') as file:
+    for line in file:
+        line_contents = line.rstrip().split()
+        sun_angular_diameter.append(float(line_contents[2]))
+
+plt.plot(obs_time, separation)
+plt.show()
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
